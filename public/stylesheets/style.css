@@ -1,0 +1,26 @@
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+a {
+  color: #00B7FF;
+}
+
+.container-top{
+    margin-top:85px;
+}
+
+a.a-right{
+    font-size: 1.3em;
+    float:right;
+}
+
+.card-text{
+    height:50px;
+    overflow: auto;
+}
+
+/*.modal-footer button{*/
+    /*margin:auto;*/
+/*}*/

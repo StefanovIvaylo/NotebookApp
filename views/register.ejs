@@ -1,0 +1,34 @@
+<% include templates/header.ejs %>
+
+<div class="container col-md-6 container-top">
+    <h1><%= title %></h1>
+    <br/>
+
+    <ul>
+        <%if (typeof errors !== 'undefined') {%>
+        <% for(var i=0; i<errors.length; i++) {%>
+        <div class="alert alert-danger" role="alert">
+        <%= errors[i].msg %>
+        </div>
+        <% }} %>
+
+    </ul>
+    <form method="POST" action="/register">
+        <div class="form-group">
+            <label for="usernameId">Username</label>
+            <input type="text" name="username" class="form-control" id="usernameId" aria-describedby="emailHelp" placeholder="Username">
+        </div>
+        <div class="form-group">
+            <label for="passwordId">Password</label>
+            <input type="password" name="password" class="form-control" id="passwordId" placeholder="Enter Password">
+        </div>
+        <div class="form-group">
+            <label for="passwordId1">Re-enter Password</label>
+            <input type="password" name="password-repeat" class="form-control" id="passwordId1" placeholder="Password">
+        </div>
+        <button type="submit" class="btn btn-primary">Sign up</button>
+    </form>
+    <a href="/" class="a-right">Log in</a>
+</div>
+
+<% include templates/footer.ejs%>
